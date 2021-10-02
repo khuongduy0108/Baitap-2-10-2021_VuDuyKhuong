@@ -1,9 +1,21 @@
 import pandas as pd
 
-series_ex = {"a":[1, 4, 6, 7, 8], "b":[23, 12, 56, 8, 22], "c":[87, 65, 43, 11, 34]}
+data_frame = {"a": [1, 4, 6, 7, 8], "b": [23, 12, 56, 8, 22], "c": [87, 65, 43, 11, 34]}
 
-series_data = pd.DataFrame(series_ex)
+df = pd.DataFrame(data_frame)
 
-print(series_data)
-print("Xuat ra cot dau cua series")
-print(series_data.iloc[:, 0])
+print(df)
+
+print("In ra cột đầu của dataframe")
+print(df['b'])
+
+print("In ra hàng đầu tiên của dataframe")
+print(df.loc[0])
+
+
+
+series_ex = pd.Series([1,2,3])
+print(series_ex)
+print('phan tu dau tien  cua series')
+
+print(series_ex[0])
